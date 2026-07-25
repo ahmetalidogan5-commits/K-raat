@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kıraat Hoca Sistemi</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="sidebar">
+
+<h2>🕌 Kıraat Paneli</h2>
+
+<button>🏠 Ana Sayfa</button>
+
+<button>👨‍🎓 Talebeler</button>
+
+<button>➕ Talebe Ekle</button>
+
+<button>🎤 Mülakat</button>
+
+<button>🕌 İmamlık</button>
+
+<button>📢 Müezzinlik</button>
+
+<button>🎲 Rastgele Seç</button>
+
+<button>📅 Haftalık Liste</button>
+
+<button>📊 İstatistik</button>
+
+<button>⚙️ Ayarlar</button>
+
+</div>
+
+<div class="content">
+
+<h1>Kıraat Hoca Yönetim Sistemi</h1>
+
+<div class="cards">
+
+<div class="card">
+<h2>Toplam Talebe</h2>
+<p id="ogrenci">0</p>
+</div>
+
+<div class="card">
+<h2>İmamlık</h2>
+<p>Hazır</p>
+</div>
+
+<div class="card">
+<h2>Müezzinlik</h2>
+<p>Hazır</p>
+</div>
+
+<div class="card">
+<h2>Mülakat</h2>
+<p>Hazır</p>
+</div>
+
+</div>
+
+<h2>Talebe Ekle</h2>
+
+<input id="ad" placeholder="Ad">
+
+<input id="soyad" placeholder="Soyad">
+
+<input id="sinif" placeholder="Sınıf">
+
+<button onclick="ekle()">Kaydet</button>
+
+<hr>
+
+<h2>Talebeler</h2>
+
+<div id="liste"></div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
