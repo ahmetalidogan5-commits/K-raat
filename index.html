@@ -1,90 +1,72 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kıraat Hoca Sistemi</title>
-
-<link rel="stylesheet" href="style.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İmam Müezzinlik Sıralama Sistemi</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+    <div class="container">
+        <header>
+            <h1>🕌 İmam Müezzinlik Sıralama Sistemi</h1>
+            <p>Kıraat Talebe Takip Paneli</p>
+        </header>
 
-<div class="sidebar">
+        <div class="main-content">
+            <!-- Talebe Ekleme Formu -->
+            <div class="card">
+                <h2>📝 Yeni Talebe Ekle</h2>
+                <form id="talebeForm">
+                    <div class="form-group">
+                        <label>Ad:</label>
+                        <input type="text" id="ad" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Soyad:</label>
+                        <input type="text" id="soyad" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Sınıf:</label>
+                        <select id="sinif" required>
+                            <option value="">Seçiniz</option>
+                            <option value="1">1. Sınıf</option>
+                            <option value="2">2. Sınıf</option>
+                            <option value="3">3. Sınıf</option>
+                            <option value="4">4. Sınıf</option>
+                            <option value="5">5. Sınıf</option>
+                            <option value="6">6. Sınıf</option>
+                            <option value="7">7. Sınıf</option>
+                            <option value="8">8. Sınıf</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn-primary">Talebe Ekle</button>
+                </form>
+            </div>
 
-<h2>🕌 Kıraat Paneli</h2>
+            <!-- Talebeler Butonu -->
+            <div class="card">
+                <button id="talebeListBtn" class="btn-large">
+                    👥 Talebeler Listesi
+                    <span id="talebeCount">0</span>
+                </button>
+            </div>
+        </div>
 
-<button>🏠 Ana Sayfa</button>
+        <!-- Talebeler Modal Penceresi -->
+        <div id="talebeModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>👥 Tüm Talebeler</h2>
+                    <span class="close">&times;</span>
+                </div>
+                <div class="modal-body">
+                    <div id="talebeListesi"></div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-<button>👨‍🎓 Talebeler</button>
-
-<button>➕ Talebe Ekle</button>
-
-<button>🎤 Mülakat</button>
-
-<button>🕌 İmamlık</button>
-
-<button>📢 Müezzinlik</button>
-
-<button>🎲 Rastgele Seç</button>
-
-<button>📅 Haftalık Liste</button>
-
-<button>📊 İstatistik</button>
-
-<button>⚙️ Ayarlar</button>
-
-</div>
-
-<div class="content">
-
-<h1>Kıraat Hoca Yönetim Sistemi</h1>
-
-<div class="cards">
-
-<div class="card">
-<h2>Toplam Talebe</h2>
-<p id="ogrenci">0</p>
-</div>
-
-<div class="card">
-<h2>İmamlık</h2>
-<p>Hazır</p>
-</div>
-
-<div class="card">
-<h2>Müezzinlik</h2>
-<p>Hazır</p>
-</div>
-
-<div class="card">
-<h2>Mülakat</h2>
-<p>Hazır</p>
-</div>
-
-</div>
-
-<h2>Talebe Ekle</h2>
-
-<input id="ad" placeholder="Ad">
-
-<input id="soyad" placeholder="Soyad">
-
-<input id="sinif" placeholder="Sınıf">
-
-<button onclick="ekle()">Kaydet</button>
-
-<hr>
-
-<h2>Talebeler</h2>
-
-<div id="liste"></div>
-
-</div>
-
-<script src="script.js"></script>
-
+    <script src="script.js"></script>
 </body>
-
 </html>
